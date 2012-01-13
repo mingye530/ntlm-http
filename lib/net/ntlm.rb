@@ -104,7 +104,7 @@ module Net  #:nodoc:
           str.encode("UTF-16LE").force_encoding("ASCII-8BIT")
         else
           # Kconv on JRUBY outputs a BOM... so strip that
-          swap16(Kconv.kconv(str, Kconv::UTF16, Kconv::ASCII).gsub(/^\376\377/,''))
+          #swap16(Kconv.kconv(str, Kconv::UTF16, Kconv::ASCII).gsub(/^\376\377/,''))
         end
       end
     
